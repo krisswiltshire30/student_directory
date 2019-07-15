@@ -17,10 +17,12 @@ def print_header
   puts 'The students of Villains Academy'
   puts '------------------'
 end
-# each_with_index used to put number at the beggining of output
+#Outputs names that begin with K
 def print(students)
   students.each_with_index do |student, index|
-    puts "#{index + 1}. #{student[:name]}, (#{student[:cohort]} cohort)"
+    if student[:name].chars.first == 'k'
+      puts "#{index + 1}. #{student[:name]}, (#{student[:cohort]} cohort)"
+    end
   end
 end
 
